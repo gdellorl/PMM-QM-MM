@@ -1,0 +1,26 @@
+!QM/MM CAM-B3LYP D3BJ RIJCOSX verytightSCF DEFGRID3 KEEPDENS ENGRAD
+
+%basis
+Basis "Def2-TZVP"
+AuxJ "Def2/J"
+AuxC "Def2-TZVP/C"
+AuxJK "Def2/JK"
+end
+
+%tddft
+TDA True
+IRoot 1
+nroots 3
+maxdim 20
+donto true
+NTOThresh 1e-4
+DOTRANS ALL
+end
+
+%qmmm
+QMAtoms  {0:15} end
+ActiveAtoms {0:15} end
+ORCAFFFilename  "System.ORCAFF.prms"
+end
+
+*pdbfile 0 1 frame_2090ps.pdb
